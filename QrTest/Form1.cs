@@ -16,6 +16,7 @@ using MessagingToolkit.QRCode.Codec.Data;
  * работа с изображениями https://metanit.com/sharp/windowsforms/4.16.php
  * 
  * lib-а (библеотека) для работы с QR-кодом расположена в проекте, папка libs
+ * https://github.com/frastercom/QrTest/tree/master/QrTest/libs
  */
 
 namespace QrTest
