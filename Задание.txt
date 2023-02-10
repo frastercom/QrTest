@@ -1,4 +1,29 @@
+http://base64.ru/
+
 Создать прогамму с пользовательским интерфейсом
 1) Программа должна уметь создать QR код и расшифровать его
 2) Программа должна отправить запрос на сервер для валидации QR-code:
 - возможно два варианта ответа от сервера (result = OK и result = faild)
+
+Адрес отправки POST запроса для проверки QR
+http://gitmyserver.ddns.net:8080/api/qr/check
+В теле отправляется строка в формате base64
+
+строка в формате должна содержать в себе любой json, например:
+строка base64 -> eyJyZXN1bHQiOiJvayJ9  содержание qr кода -> {"result":"ok"}
+
+примеры скрины в папке image
+
+пример ответа 
+{
+    "status": "failed",
+    "errorMessage": "com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 17 path $"
+}
+
+
+
+
+{
+    "status": "OK",
+    "errorMessage": null
+}
